@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>jq练习</title>
+<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<div class="header center">
+	<div class="title"> jq练习 </div>
+	<div class="meun"><a href="index.html">返回首页</a></div>
+	<div class="clear"></div>
+</div>
+<div class="index center">
+	<div id="index_box">
+		<ul>
+			<li> <a href="#" id="jqzairu">jq载入</a> </li>
+			<li> <a href="#" id="shiyongxuanzeqi">实用选择器</a></li>
+			<li> <a href="#">jq动画</a>
+				<ul>
+					<li><a href="#" id="huadong">滑动</a></li>
+					<li><a href="#" id="danchudanru">淡出淡入</a></li>
+					<li><a href="#" id="zantingdonghua">暂停动画</a></li>
+				</ul>			
+			</li>
+			<li><a href="#">实例</a></li>
+			<li><a href="#">注意要点</a></li>
+		</ul>
+		
+	</div>
+	<div class="iframe">
+		<iframe class="window" frameborder="no" height="1000px" ></iframe>
+	</div>
+	<div class="clear"></div>
+</div>
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".index li>a").click(function(){
+			var idPoint = $(this).attr("id");
+        	if(idPoint){
+			$(".window").attr("src","jqproject/"+idPoint+".html");
+			}
+		});
+	});
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>js练习</title>
+<link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+<div class="header center">
+	<div class="title"> js练习 </div>
+	<div class="meun"><a href="index.html">返回首页</a></div>
+	<div class="clear"></div>
+</div>
+<div class="index center">
+	<div id="index_box">
+		<ul>
+			<li> <a href="#">js动画</a> </li>
+			<li> <a href="#">算法</a>
+				<ul>
+					<li><a href="#">数组</a></li>
+				</ul></li>
+				<li><a href="#">日期</a></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+</body>
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/index.js"></script>
+<script>
+	$(document).ready(function(){
+		$(".index li>a").click(function(){
+			var idPoint = $(this).attr("id");
+        	if(idPoint){
+			$(".window").attr("src","jsproject/"+idPoint+".html");
+			}
+		});
+	});
+</script>
+</html>
